@@ -56,7 +56,8 @@ export function getAvailableTimeSlots(date: Date): TimeSlot[] {
       id: `slot-${startTime.toISOString()}`,
       startTime: startTime.toISOString(),
       endTime: new Date(startTime.getTime() + 60 * 60 * 1000).toISOString(),
-      available: Math.random() > 0.3 // Randomly mark some slots as unavailable
+      // available: Math.random() > 0.3 // Randomly mark some slots as unavailable
+      available: true
     });
   }
 

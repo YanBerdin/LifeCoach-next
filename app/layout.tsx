@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
+// https://stackoverflow.com/questions/76478043/next-js-always-fail-at-downloading-fonts-from-google-fonts
+// const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false });
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
