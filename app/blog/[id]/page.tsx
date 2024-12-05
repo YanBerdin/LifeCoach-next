@@ -20,6 +20,11 @@ export function generateStaticParams() {
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
+  if (!params || !params.id) {
+    notFound();
+    return null;
+  }
+
   const post = blogPosts.find((p) => p.id === params.id);
 
   if (!post) {
@@ -34,8 +39,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     <main className="min-h-screen bg-white">
       <Navbar />
       <BlogHeader post={post} />
-      
-      <Container className="py-16">
+
+      <Container className="mt-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <BlogContent content={post.content} />

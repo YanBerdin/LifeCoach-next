@@ -12,7 +12,7 @@ interface BlogHeaderProps {
 
 export function BlogHeader({ post }: BlogHeaderProps) {
   return (
-    <div className="relative pt-32 pb-16">
+    <div className="relative">
       <div className="absolute inset-0 h-[500px]">
         <Image
           src={post.imageUrl}
@@ -24,7 +24,7 @@ export function BlogHeader({ post }: BlogHeaderProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
       </div>
       
-      <Container className="relative">
+      <Container className="relative pt-32 pb-16">
         <motion.div 
           className="max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
